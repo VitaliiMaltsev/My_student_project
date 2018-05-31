@@ -29,7 +29,7 @@ public class ProcessStarter {
 
     public void processList() {
         StudentOrderDataSource ds = FactoryDataSource.getDataSource();
-        ds.addStudentOrder(null);
+        //ds.addStudentOrder(null);
         List<StudentOrder> orderList = ds.getStudentOrders();
         StudentOrders sors = new StudentOrders();
         JaxbReader jaxbReader = new JaxbReader();
