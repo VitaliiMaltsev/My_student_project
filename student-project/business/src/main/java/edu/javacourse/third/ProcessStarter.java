@@ -28,13 +28,15 @@ public class ProcessStarter {
     }
 
     public void processList() {
-        //StudentOrderDataSource ds = FactoryDataSource.getDataSource();
+        StudentOrderDataSource ds = FactoryDataSource.getDataSource();
+        ds.addStudentOrder(null);
+        List<StudentOrder> orderList = ds.getStudentOrders();
         StudentOrders sors = new StudentOrders();
         JaxbReader jaxbReader = new JaxbReader();
-        List<StudentOrder> orderList = jaxbReader.readXml();
-        for (StudentOrder so : orderList) {
-            processStudentOrder(so);
-        }
+//        List<StudentOrder> orderList = jaxbReader.readXml();
+//        for (StudentOrder so : orderList) {
+//            processStudentOrder(so);
+//        }
     }
 
     private void processStudentOrder(StudentOrder so) {

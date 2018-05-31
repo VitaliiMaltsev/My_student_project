@@ -10,4 +10,5 @@ import java.util.List;
 public interface StudentOrderDataSource
 {
     List<StudentOrder> getStudentOrders();
+    Long addStudentOrder(StudentOrder so);
 }

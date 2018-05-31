@@ -5,7 +5,7 @@ package edu.javacourse.third.db;
  */
 public class FactoryDataSource
 {
-    private static String className = "edu.javacourse.third.db.DbDataSource";
+    private static String className = "edu.javacourse.third.db.DBDataSource";
 
     private static String cName = "edu.javacourse.third.db.reflection.FlexibleDataSource";
     private static String mName = "getAllOrders";

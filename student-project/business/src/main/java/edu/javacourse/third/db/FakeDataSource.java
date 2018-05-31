@@ -24,6 +24,11 @@ public class FakeDataSource implements StudentOrderDataSource
         return result;
     }
 
+    @Override
+    public Long addStudentOrder(StudentOrder so) {
+        return null;
+    }
+
     public static StudentOrder getStudentOrder(String hName, String wName, String cName) {
         PersonAdult h = new PersonAdult();
         h.setGivenName(hName);
