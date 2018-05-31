@@ -90,13 +90,13 @@
                 <!--<dateOfBirth>12.05.2011</dateOfBirth>-->
                 <!--<number>45678945</number>-->
             <!--</child>-->
-            <!--<child>-->
-                <!--<surName>Сидоров</surName>-->
-                <!--<givenName>Олег</givenName>-->
-                <!--<patronymic>Алексеевич</patronymic>-->
-                <!--<dateOfBirth>27.10.2013</dateOfBirth>-->
-                <!--<number>82378945</number>-->
-            <!--</child>-->
+            <child>
+                <surName>Сидоров</surName>
+                <givenName>Олег</givenName>
+                <patronymic>Алексеевич</patronymic>
+                <dateOfBirth>27.10.2013</dateOfBirth>
+                <number>82378945</number>
+            </child>
         </children>
         <husband>
             <surName>Сидоров</surName>

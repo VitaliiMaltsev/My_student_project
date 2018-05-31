@@ -40,14 +40,14 @@ public class ProcessStarter {
     private void processStudentOrder(StudentOrder so) {
         List<CheckerAnswer> answers = new ArrayList<>();
 
-        try {
-            answers.addAll(checkGrn(so));
-            answers.addAll(checkStudent(so));
-            answers.addAll(checkZags(so));
-        } catch (CheckException ex) {
-            // TODO Сделать обработку ошибки - что-то записать в базу
-            return;
-        }
+//        try {
+//            answers.addAll(checkGrn(so));
+//            answers.addAll(checkStudent(so));
+//            answers.addAll(checkZags(so));
+//        } catch (CheckException ex) {
+//            // TODO Сделать обработку ошибки - что-то записать в базу
+//            return;
+//        }
 
         ApproveManager approveManager = new ApproveManager();
         for (CheckerAnswer ca : answers) {
