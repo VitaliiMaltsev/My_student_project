@@ -68,4 +68,23 @@ public class DBDataSource implements StudentOrderDataSource {
         }
         return null;
     }
+}public Long addStudentOrders(StudentOrder so) {
+    try (Connection con = getConnection();) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = con.prepareStatement(
+                    "INSERT INTO st_group (groupName, curator, speciality) VALUES (?, ?, ?)");
+            stmt.setString(1, "Шестая группа");
+            stmt.setString(2, "Куратор Иванов");
+            stmt.setString(3, "Впотолокплевательство");
+            stmt.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            if (stmt != null) stmt.close();
+        }
+    } catch (SQLException ex) {
+        return null;
+    }
+}
 }
