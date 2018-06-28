@@ -12,6 +12,7 @@
     <modules>
         <module>common-types</module>
         <module>business</module>
+        <module>web-ui</module>
     </modules>
 
     <build>

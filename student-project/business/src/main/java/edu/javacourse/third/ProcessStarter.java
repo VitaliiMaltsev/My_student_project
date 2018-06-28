@@ -25,18 +25,24 @@ public class ProcessStarter {
     public static void main(String[] params) {
         ProcessStarter t = new ProcessStarter();
         t.processList();
+//        t.addStudentOrder();
+    }
+    private void addStudentOrder() {
+        StudentOrder so = StudentOrderUtil.createStudentOrder();
+        StudentOrderDataSource ds = FactoryDataSource.getDataSource();
+        ds.addStudentOrder(so);
     }
 
     public void processList() {
         StudentOrderDataSource ds = FactoryDataSource.getDataSource();
-        //ds.addStudentOrder(null);
         List<StudentOrder> orderList = ds.getStudentOrders();
-        StudentOrders sors = new StudentOrders();
-        JaxbReader jaxbReader = new JaxbReader();
+//        StudentOrders sors = new StudentOrders();
+//        JaxbReader jaxbReader = new JaxbReader();
 //        List<StudentOrder> orderList = jaxbReader.readXml();
-//        for (StudentOrder so : orderList) {
+        for (StudentOrder so : orderList) {
+            System.out.println(so.getStudentOrderId() + so.toString());
 //            processStudentOrder(so);
-//        }
+        }
     }
 
     private void processStudentOrder(StudentOrder so) {
@@ -44,8 +50,8 @@ public class ProcessStarter {
 
         try {
             answers.addAll(checkGrn(so));
-            answers.addAll(checkStudent(so));
-            answers.addAll(checkZags(so));
+//            answers.addAll(checkStudent(so));
+//            answers.addAll(checkZags(so));
         } catch (CheckException ex) {
             // TODO Сделать обработку ошибки - что-то записать в базу
             return;
