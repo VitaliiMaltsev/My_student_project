@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>business</artifactId>
-
+    <version>1.0</version>
     <dependencies>
         <dependency>
             <groupId>edu.javacourse.student</groupId>

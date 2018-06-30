@@ -26,6 +26,9 @@ public class PersonAdult extends Person implements Serializable
     @XmlJavaTypeAdapter(StudentDateAdapter.class)
     private Date passportDateExpire;
 
+    public PersonAdult() {
+    }
+
     public String getPassportSeria() {
         return passportSeria;
     }

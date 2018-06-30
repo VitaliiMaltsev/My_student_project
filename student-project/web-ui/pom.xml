@@ -7,14 +7,28 @@
         <groupId>edu.javacourse.student</groupId>
         <version>1.0</version>
     </parent>
+
     <modelVersion>4.0.0</modelVersion>
     <artifactId>web-ui</artifactId>
     <packaging>war</packaging>
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>8.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>edu.javacourse.student</groupId>
+            <artifactId>common-types</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>edu.javacourse.student</groupId>
+            <artifactId>business</artifactId>
+            <version>1.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -24,6 +38,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
                 <configuration>
                     <outputDirectory>E:\Tomcat\apache-tomcat-8.5.31\webapps</outputDirectory>
                 </configuration>

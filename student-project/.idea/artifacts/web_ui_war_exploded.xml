@@ -6,6 +6,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="web-ui" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/business/target/business-1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/common-types/target/common-types-1.0.jar" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.2.jre7" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/jstl-1.2.jar" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/web-ui/target/web-ui-1.0/META-INF/MANIFEST.MF" />

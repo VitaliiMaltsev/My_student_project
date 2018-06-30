@@ -4,10 +4,7 @@ import edu.javacourse.third.answer.CheckerAnswer;
 import edu.javacourse.third.checkers.GrnChecker;
 import edu.javacourse.third.checkers.StudentChecker;
 import edu.javacourse.third.checkers.ZagsChecker;
-import edu.javacourse.third.db.FactoryDataSource;
-import edu.javacourse.third.db.FakeDataSource;
-import edu.javacourse.third.db.JaxbReader;
-import edu.javacourse.third.db.StudentOrderDataSource;
+import edu.javacourse.third.db.*;
 import edu.javacourse.third.domain.PersonChild;
 import edu.javacourse.third.domain.StudentOrder;
 import edu.javacourse.third.domain.StudentOrders;
@@ -24,13 +21,19 @@ import java.util.concurrent.Future;
 public class ProcessStarter {
     public static void main(String[] params) {
         ProcessStarter t = new ProcessStarter();
-        t.processList();
-//        t.addStudentOrder();
+//        t.processList();
+        t.addStudentOrder();
     }
-    private void addStudentOrder() {
+    public void addStudentOrder() {
         StudentOrder so = StudentOrderUtil.createStudentOrder();
         StudentOrderDataSource ds = FactoryDataSource.getDataSource();
         ds.addStudentOrder(so);
+    }
+
+    public void addStudentOrder(StudentOrder stOr) {
+//        StudentOrder so = StudentOrderUtil.createStudentOrder();
+        StudentOrderDataSource ds = FactoryDataSource.getDataSource();
+        ds.addStudentOrder(stOr);
     }
 
     public void processList() {
@@ -142,5 +145,10 @@ public class ProcessStarter {
         es.shutdown();
         return answers;
 
+    }
+
+    public List<StudentOrder> findStudentOrders(StudentOrderFilter sof) {
+        StudentOrderDataSource ds = FactoryDataSource.getDataSource();
+        return ds.getStudentOrders();
     }
 }
